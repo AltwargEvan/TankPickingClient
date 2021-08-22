@@ -1,0 +1,21 @@
+.container-spectate {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1em 1em;
+    grid-auto-flow: row;
+    grid-template-areas: "Spacer Spacer Spacer Spacer Spacer Spacer Spacer" "Attack-Tanks Attack-Tanks Attack-Tanks Attack-Tanks Attack-Tanks Attack-Tanks Attack-Tanks" "Defense-Tanks Defense-Tanks Defense-Tanks Defense-Tanks Defense-Tanks Defense-Tanks Defense-Tanks" "Spacer2 Spacer2 Spacer2 Spacer2 Spacer2 Spacer2 Spacer2";
+    height: 98vh;
+    padding-bottom: 2vh;
+    width: 94vw;
+    padding-right: 3vw;
+    padding-left: 3vw;
+}
+
+.Spacer {
+    grid-area: Spacer;
+}
+
+.Spacer2 {
+    grid-area: Spacer2;
+}

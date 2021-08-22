@@ -1,0 +1,46 @@
+.container-admin {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1em 1em;
+    grid-auto-flow: row;
+    grid-template-areas: "Attack-Tanks Attack-Tanks Attack-Tanks Attack-Tanks Attack-Tanks Attack-Tanks Attack-Tanks" "Defense-Tanks Defense-Tanks Defense-Tanks Defense-Tanks Defense-Tanks Defense-Tanks Defense-Tanks" "Admin-Reset1 Carousel Carousel Carousel Carousel Carousel-Selected Carousel-Filter" "Admin-Reset2 Carousel Carousel Carousel Carousel Carousel-Selected Pick-Tanks";
+    height: 94vh;
+    padding-bottom: 3vh;
+    padding-top: 3vh;
+    width: 94vw;
+    padding-right: 3vw;
+    padding-left: 3vw;
+}
+
+.Spacer {
+    grid-area: Spacer;
+}
+
+.Carousel-Filter {
+    grid-area: Carousel-Filter;
+    background-color: grey;
+    border: solid rgb(0, 0, 0);
+    border-width: 5px;
+    height: 100%;
+    font-size: 30px;
+}
+.Pick-Tanks {
+    grid-area: Pick-Tanks;
+}
+.Carousel {
+    grid-area: Carousel;
+    background-color: grey;
+    border: solid rgb(0, 0, 0);
+    border-width: 5px;
+    height: 100%;
+    font-size: 30px;
+}
+.Carousel-Selected {
+    grid-area: Carousel-Selected;
+    background-color: grey;
+    border: solid rgb(0, 0, 0);
+    border-width: 5px;
+    height: 100%;
+    font-size: 30px;
+}

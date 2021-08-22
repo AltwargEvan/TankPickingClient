@@ -1,0 +1,12 @@
+.blur-bg {
+    backdrop-filter: blur(0px);
+}
+
+body {
+    background-image: url('https://media.discordapp.net/attachments/877290302677848105/877669050346516490/unknown.png?width=1188&height=671');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}

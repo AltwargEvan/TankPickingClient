@@ -1,0 +1,6 @@
+/* https://medium.com/developer-rants/what-if-height-100vh-is-bigger-than-your-screen-7f39c62ac170 */
+body, html{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
