@@ -1,21 +1,23 @@
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-
 import { 
   ApolloClient, ApolloProvider, HttpLink, InMemoryCache, split
 } from '@apollo/client' 
 import { getMainDefinition } from '@apollo/client/utilities'
 import { WebSocketLink } from '@apollo/client/link/ws';
 
-const serverURI = '://localhost:4000/graphql'
+require('dotenv').config()
 
+const queryEndpoint = process.env.QUERY_ENDPOINT || 'https://wottankpickserver.herokuapp.com/graphql' || 'http://localhost:4000/graphql'
+const subscriptionEndpoint = process.env.SUBSCRIPTION_ENDPOINT || 'ws://wottankpickserver.herokuapp.com/subscriptions'||'ws://localhost:4000/subscriptions'
 const httpLink = new HttpLink({
-  uri: `http${serverURI}`
+  uri: queryEndpoint
 });
 
 const wsLink = new WebSocketLink({
-  uri: `ws${serverURI}`,
+  uri: subscriptionEndpoint,
   options: {
     reconnect: true
   }
