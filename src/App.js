@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+    BrowserRouter as Router,
+    Switch, Route
+} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//pages
+import Home from "./Pages/Home";
+import Team from "./Pages/Team";
+import Spectate from "./Pages/Spectate";
+import Admin from "./Pages/Admin";
+import MatchDataRouter from "./Components/MatchDataRouter";
+
+//global css
+import "./Styles/global.css"
+import './Styles/fullscreendiv.css'
+import './Styles/background.css'
+
+const App = () => {
+    return (
+        <>
+
+            <div className='full-screen-div blur-bg'>
+                <Router>
+                    <Switch>
+                        <Route path="/:userType/:key">
+                            <MatchDataRouter />
+                        </Route>
+                        <Route path="/">
+                            <Home />
+                        </Route>
+                    </Switch >
+                </Router >
+                <div class="blur"></div>
+            </div>
+
+        </>
+
+    )
 }
 
 export default App;
